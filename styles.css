@@ -80,7 +80,6 @@ hr {
 }
 .image{
     width:80%;
-    border-radius: 50%;
 }
 
 /*INICIO*/
@@ -154,7 +153,9 @@ hr {
 }
 
 /*PROYECTOS*/
-
+#p_container{
+    margin: 8em 0;
+}
 .proyectos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -177,10 +178,10 @@ hr {
 
 /*CONTACTO*/
 #contacto{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     width: 80%;
-    margin: auto;
+    margin: 8em auto;
 }
 #contacto a:hover{
     opacity: 0.8;
@@ -195,61 +196,98 @@ hr {
 }
 
 
-  @media screen and (max-width: 500px){
+
+
+
+/*------------------------------------------------------------*/
+
+
+
+
+
+@media screen and (max-width: 1280px){
+
+    /* Nav */
+    #nav a {
+           font-size: 1em;
+           
+    }
+    
+    /*INICIO*/
+    #inicio{
+        margin: 10em auto 8em;
+    }
+    #i_desc h1{
+        font-size: 2em;
+    }
+    #i_desc p{
+        font-size: 1.3em;    
+    }
+    
+    .boton{
+        font-size: 1.3em;
+        margin-top: 1em;
+    }
+    
+    /*HABILIDADES*/
+    #habilidades{
+        margin: 6em 0;
+    }
+    .titulos h2{
+        font-size: 1.6em;
+    }
+    .mensaje{
+        font-size: 1.3em;
+    }
+    .h_iconos{
+        font-size: 7em;
+    }
+    
+    /*PROYECTOS*/
+    #p_container{
+        margin: 6em 0;
+    }
+    .proyectos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    
+    /*CONTACTO*/
+    #contacto{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: 6em auto;
+    }
+    #contacto a:hover{
+        opacity: 0.8;
+        transition: .5s;
+    }
+    
+    
+      }
+
+
+
+
+/*------------------------------------------------------------*/
+
+
+
+
+
+  @media screen and (max-width: 900px){
 
     /* Nav */
 
-#nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: #282a2c;
-    border-bottom: solid #494c50;
-    display: flex;
-    justify-content: center;    
-    padding: 1.5em;
-    z-index: 10000;    
-}
-
-    #nav ul {
-        margin-bottom: 0;
-        list-style: none;
-    }
-
-    #nav li {
-        display: inline-block;
-    }
-
     #nav a {
-        text-decoration: none;
-        color: whitesmoke;
         font-size: 0.86em;
-        font-weight: 1000;
-        border-radius: 2em;
         padding: 0.5em;
         margin: .1em;
-       
     }
-
-        #nav a:hover {
-            color: #ffe190;
-            background: #3f3e3e;
-            transition: .5s;
-        }
 
 /*Foto*/
 .image{
     width:60%;
-}
-
-
-/*TEXT DECORACION*/
-.text_decorate{
-    color: #ffe190;
-}
-.text_decorate:hover{
-    color: #ffcd43;
-    transition: 1s;
 }
 
 /*INICIO*/
@@ -281,11 +319,6 @@ hr {
 /*BOTON*/
 .boton{
     font-size: 1em;
-    font-weight: 700;
-    text-decoration: none;
-    color: whitesmoke;
-    background-color:#028856;
-    border-radius: 2em;
     padding: 0.7em;
 }
 
@@ -293,25 +326,14 @@ hr {
 #habilidades{
     margin: 4em 0;
 }
-.titulos{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: auto;
-    text-align: center;  
-}
+
 .titulos h2{
     font-size: 1.4em;
 }
 .mensaje{
     font-size: 1em;
-    color: #ffe190;
-    margin: 1em 0;
 }
 .h_iconos{
-    text-align: center; 
-    margin: auto;
-    width: 80%;
     font-size: 5em;
 }
 
@@ -336,12 +358,15 @@ hr {
 /*CONTACTO*/
 #contacto{
     flex-direction: column;
+    margin: 4em auto;
 }
 
 footer p{
-    text-align: center;
     font-size: 0.8em;
-    margin: -2em 0 1.5em;
-    color: #494c50;
 }
   } 
+
+
+
+
+
